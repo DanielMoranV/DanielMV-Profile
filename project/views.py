@@ -94,7 +94,6 @@ class ProjectDetail(View):
         return render(request, self.template, {'project': project, 'form': form})
     
     def post(self, request, project_id):
-
         try: 
             project = get_object_or_404(self.model, pk=project_id, user=request.user)
             form = self.form(request.POST, instance=project)

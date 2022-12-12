@@ -9,5 +9,5 @@ class Project(models.Model):
     description = models.TextField(blank=True)
     url_github = models.CharField(max_length=200)
     created = models.DateTimeField(auto_now_add=True)
-    last_change = models.DateTimeField(null=True, blank=True)
+    last_change = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
