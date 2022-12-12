@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CSRF_TRUSTED_ORIGINS =['https://danielmv-profile-production-7894.up.railway.app']
 ROOT_URLCONF = 'bookprojects.urls'
 
 TEMPLATES = [
