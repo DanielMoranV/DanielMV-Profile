@@ -19,11 +19,6 @@
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a href="{#% url 'tasks_completed' %}" class="nav-link"
-              >complted tasks</a
-            >
-          </li>
-          <li class="nav-item">
             <a href="{% url 'profile' %}" class="nav-link">Perfil</a>
           </li>
           <li class="nav-item">
