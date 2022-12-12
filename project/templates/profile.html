@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Bienvenido @{{request.user}}</h1>
+
+<ul>
+    {% for project in projects %}
+    <li>
+      <a href="{% url 'projects_detail' project.id %}""><strong>{{project.title}}</strong></a>
+      <p>Url Github: {{project.url_github}}</p>
+      <p>Descripción: {{project.description}}</p>
+      <p>Fecha de Creación: {{project.created|date:'M j Y:i'}}</p>
+    </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

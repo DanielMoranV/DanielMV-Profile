@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Crear Nuevo Proyecto</h1>
+
+{{error}}
+<form action="/profile/create_project/" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+
+  <button>Save</button>
+</form>
+{% endblock %}

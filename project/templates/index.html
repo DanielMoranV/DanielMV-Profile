@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <h1>Home</h1>
+</div>
+<ul>
+  {% for project in projects %}
+  <li>
+    <a href="{#% url 'projects_detail' project.id %}""><strong>{{project.title}}</strong></a>
+    <p>Url Github: {{project.url_github}}</p>
+    <p>Descripción: {{project.description}}</p>
+    <p>Fecha de Creación: {{project.created|date:'M j Y:i'}}</p>
+    <p>Usuario: {{project.user}}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
